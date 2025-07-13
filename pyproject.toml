@@ -1,0 +1,18 @@
+[tool.ruff]
+line-length = 79
+exclude = [".venv", "__pycache__", ".git"]
+fix = true
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes (undefined names, etc.)
+    "B",   # bugbear (common bugs and security issues)
+    "I",   # isort (import sorting)
+    "W",   # pycodestyle warnings (e.g., whitespace)
+    "UP",  # pyupgrade (Python 3+ syntax suggestions)
+]
+
+[tool.mypy]
+strict = true
+exclude = '(\.venv|__pycache__|\.git|tests)'
